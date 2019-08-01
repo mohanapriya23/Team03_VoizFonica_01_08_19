@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+
+    <title>Plans</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/plans.css">
+	<link href='//fonts.googleapis.com/css?family=Lato:400,300,700,100' rel='stylesheet' type='text/css'>
+  <link href="//fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+    
+	<body>
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-green static-top">
+    <div class="container">
+      <a class="navbar-brand" href="dashboard.html">VoizFonica</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto"style="color:white">
+          <li class="nav-item active"style="color:white" >
+            <a class="nav-link" href="dashboard.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="paymentRecharge.html">Payment and Recharge</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="plans.html">Packs and Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="donglepurchase.html">Purchase</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About us</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div id="generic_price_table">
+    <section>
+        <div class="container">
+            <div class="row" >
+                <div class="col-md-12">
+                    <!--PRICE HEADING START-->
+                    <div class="price-heading clearfix">
+                        <h1 style ="color:rgb(102,179,80)">POSTPAID PLANS</h1>
+                    </div>
+                    <!--//PRICE HEADING END-->
+                </div>
+            </div>
+        </div>
+        <div class="container" >
+
+            <!--BLOCK ROW START-->
+            <div class="row" >
+                <div class="col-md-4" th:each="property : ${plans}">
+
+                    <!--PRICE CONTENT START-->
+                    <div class="generic_content clearfix" style="border:1px solid gray">
+
+                        <!--HEAD PRICE DETAIL START-->
+                        <div class="generic_head_price clearfix">
+
+                            <!--HEAD CONTENT START-->
+                            <div class="generic_head_content clearfix">
+
+                                <!--HEAD START-->
+                                <div class="head_bg"></div>
+                                <div class="head">
+                                    <span th:text ="${property.planName}"></span>
+                                </div>
+                                <!--//HEAD END-->
+
+                            </div>
+                            <!--//HEAD CONTENT END-->
+
+                            <!--PRICE START-->
+                            <div class="generic_price_tag clearfix">
+                                <span class="price">
+                                    <span class="sign" th:text ="${property.currency}"></span>
+                                    <span class="currency" th:text ="${property.amount}" ></span>
+                                    <span class="month" th:text ="${property.valid}"></span>
+                                </span>
+                            </div>
+                            <!--//PRICE END-->
+
+                        </div>
+                        <!--//HEAD PRICE DETAIL END-->
+
+                        <!--FEATURE LIST START-->
+                        <div class="generic_feature_list">
+                            <ul>
+                                <li><span th:text ="${property.totalData}"></span> Total Data</li>
+                                <li><span th:text ="${property.speed}"></span> Speed</li>
+                                <li><span >Unlimited</span> Data</li>
+                                <li><span th:text ="${property.validity}"> Days</span> Validity</li>
+                            </ul>
+                        </div>
+                        <!--//FEATURE LIST END-->
+
+                        <!--BUTTON START-->
+                        <div class="generic_price_btn clearfix">
+                            <a class="" th:href="payment">Buy Now!!!</a>
+                        </div>
+                        <!--//BUTTON END-->
+
+                    </div>
+                    <!--//PRICE CONTENT END-->
+
+                </div>
+
+
+            </div>
+            <!--//BLOCK ROW END-->
+        </div>
+    </section>
+</div>
+</section>
+</div>
+
+
+<!--
+<div id="generic_price_table">
+<section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    &lt;!&ndash;PRICE HEADING START&ndash;&gt;
+                    <div class="price-heading clearfix">
+                        <h1 style ="color:rgb(102,179,80)">DONGLE PLANS</h1>
+                    </div>
+                    &lt;!&ndash;//PRICE HEADING END&ndash;&gt;
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            
+            &lt;!&ndash;BLOCK ROW START&ndash;&gt;
+            <div class="row">
+                <div class="col-md-4">
+                
+                	&lt;!&ndash;PRICE CONTENT START&ndash;&gt;
+                    <div class="generic_content clearfix"style="border:1px solid gray">
+                        
+                        &lt;!&ndash;HEAD PRICE DETAIL START&ndash;&gt;
+                        <div class="generic_head_price clearfix">
+                        
+                            &lt;!&ndash;HEAD CONTENT START&ndash;&gt;
+                            <div class="generic_head_content clearfix">
+                            
+                            	&lt;!&ndash;HEAD START&ndash;&gt;
+                                <div class="head_bg"></div>
+                                <div class="head">
+                                    <span>Starter Pack</span>
+                                </div>
+                                &lt;!&ndash;//HEAD END&ndash;&gt;
+                                
+                            </div>
+                            &lt;!&ndash;//HEAD CONTENT END&ndash;&gt;
+                            
+                            &lt;!&ndash;PRICE START&ndash;&gt;
+                            <div class="generic_price_tag clearfix">	
+                                <span class="price">
+                                    <span class="sign">₹</span>
+                                    <span class="currency">249</span>
+                                </span>
+                            </div>
+                            &lt;!&ndash;//PRICE END&ndash;&gt;
+                            
+                        </div>                            
+                        &lt;!&ndash;//HEAD PRICE DETAIL END&ndash;&gt;
+                        
+                        &lt;!&ndash;FEATURE LIST START&ndash;&gt;
+                        <div class="generic_feature_list">
+                        	<ul>
+                            	<li><span>150GB</span> Total Data</li>
+								<li><span>Upto 30Mbps</span> Speed</li>
+								<li><span>50 days</span> Validity</li>
+                            </ul>
+                        </div>
+                        &lt;!&ndash;//FEATURE LIST END&ndash;&gt;
+                        
+                        &lt;!&ndash;BUTTON START&ndash;&gt;
+                        <input name="ingredients" type="checkbox" th:value="${dongleplans.id}" />
+                        <span th:text="${dongleplans.scheme}">CHOOSE PLAN</span><br/>
+                        <div class="generic_price_btn clearfix">
+                            <a class="" th:href="payment">Buy Now!!!</a>
+                        </div>
+                        &lt;!&ndash;//BUTTON END&ndash;&gt;
+                        
+                    </div>
+                    &lt;!&ndash;//PRICE CONTENT END&ndash;&gt;
+                        
+                </div>
+                
+                <div class="col-md-4">
+                
+                	&lt;!&ndash;PRICE CONTENT START&ndash;&gt;
+                    <div class="generic_content active clearfix"style="border:1px solid gray">
+                        
+                        &lt;!&ndash;HEAD PRICE DETAIL START&ndash;&gt;
+                        <div class="generic_head_price clearfix">
+                        
+                            &lt;!&ndash;HEAD CONTENT START&ndash;&gt;
+                            <div class="generic_head_content clearfix">
+                            
+                            	&lt;!&ndash;HEAD START&ndash;&gt;
+                                <div class="head_bg"></div>
+                                <div class="head">
+                                <span>Best Value</span>
+                                </div>
+                                &lt;!&ndash;//HEAD END&ndash;&gt;
+                                
+                            </div>
+                            &lt;!&ndash;//HEAD CONTENT END&ndash;&gt;
+                            
+                            &lt;!&ndash;PRICE START&ndash;&gt;
+                            <div class="generic_price_tag clearfix">	
+                                <span class="price">
+                                    <span class="sign">₹</span>
+                                    <span class="currency">699</span>
+                                </span>
+                            </div>
+                            &lt;!&ndash;//PRICE END&ndash;&gt;
+                            
+                        </div>                            
+                        &lt;!&ndash;//HEAD PRICE DETAIL END&ndash;&gt;
+                        
+                        &lt;!&ndash;FEATURE LIST START&ndash;&gt;
+                        <div class="generic_feature_list">
+                        	<ul>
+                                <li><span>500GB</span> Total Data</li>
+								<li><span>Upto 50Mbps</span> Speed</li>
+								<li><span>75 days</span> Validity</li>
+                            </ul>
+                        </div>
+                        &lt;!&ndash;//FEATURE LIST END&ndash;&gt;
+                        
+                        &lt;!&ndash;BUTTON START&ndash;&gt;
+                        <input name="ingredients" type="checkbox" th:value="${dongleplans.id}" />
+                        <span th:text="${dongleplans.scheme}">CHOOSE PLAN</span><br/>
+                        <div class="generic_price_btn clearfix">
+                        	<a class="" th:href="payment">Buy Now!!!</a>
+                        </div>
+                        &lt;!&ndash;//BUTTON END&ndash;&gt;
+                        
+                    </div>
+                    &lt;!&ndash;//PRICE CONTENT END&ndash;&gt;
+                        
+                </div>&ndash;&gt;
+                <div class="col-md-4">
+                
+                	&lt;!&ndash;PRICE CONTENT START&ndash;&gt;
+                    <div class="generic_content clearfix"style="border:1px solid gray">
+                        
+                        &lt;!&ndash;HEAD PRICE DETAIL START&ndash;&gt;
+                        <div class="generic_head_price clearfix">
+                        
+                            &lt;!&ndash;HEAD CONTENT START&ndash;&gt;
+                            <div class="generic_head_content clearfix">
+                            
+                            	&lt;!&ndash;HEAD START&ndash;&gt;
+                                <div class="head_bg"></div>
+                                <div class="head">
+                                    <span>Power User</span>
+                                </div>
+                                &lt;!&ndash;//HEAD END&ndash;&gt;
+                                
+                            </div>
+
+                            &lt;!&ndash;PRICE START&ndash;&gt;
+                            <div class="generic_price_tag clearfix">
+                                <span class="price">
+                                    <span class="sign" th:text ="${property.currency}"></span>
+                                    <span class="currency" th:text ="${property.amount}" ></span>
+                                    <span class="month" th:text ="${property.valid}"></span>
+                                </span>
+                            </div>
+                            &lt;!&ndash;//PRICE END&ndash;&gt;
+
+                        </div>
+                        &lt;!&ndash;//HEAD PRICE DETAIL END&ndash;&gt;
+
+                        &lt;!&ndash;FEATURE LIST START&ndash;&gt;
+                        <div class="generic_feature_list">
+                            <ul>
+                                <li><span th:text ="${property.totaldata}"></span> Total Data</li>
+                                <li><span th:text ="${property.speed}"></span> Total Data</li>
+                                <li><span >Unlimited</span> Calls</li>
+                                <li><span th:text ="${property.validity}"> SMS</span> per day</li>
+                            </ul>
+                        </div>-->
+                        <!--//FEATURE LIST END-->
+
+                        <!--//HEAD CONTENT END-->
+                            
+                          <!--  PRICE START
+                            <div class="generic_price_tag clearfix">	
+                                <span class="price">
+                                    <span class="sign">₹</span>
+                                    <span class="currency">1999</span>
+                                </span>
+                            </div>
+                            //PRICE END
+                            
+                        </div>                            
+                        //HEAD PRICE DETAIL END
+                        
+                        FEATURE LIST START
+                        <div class="generic_feature_list">
+                        	<ul>
+                            	<li><span>1000GB</span> Total Data</li>
+								<li><span>Upto 100Mbps</span> Speed</li>
+								<li><span>150 days</span> Validity</li>
+                            </ul>
+                        </div>
+                        //FEATURE LIST END-->
+                        
+                        <!--BUTTON START-->
+                       <!-- <input name="ingredients" type="checkbox" th:value="${dongleplans.id}" />
+                        <span th:text="${dongleplans.scheme}">CHOOSE PLAN</span><br/>-->
+          <!--              <div class="generic_price_btn clearfix">
+                        	<a class="" th:href="payment">Buy Now!!!</a>
+                        </div>
+                        &lt;!&ndash;//BUTTON END&ndash;&gt;
+                        
+                    </div>
+                    &lt;!&ndash;//PRICE CONTENT END&ndash;&gt;
+                        
+                </div>
+            </div>	
+            &lt;!&ndash;//BLOCK ROW END&ndash;&gt;
+        </div>
+    </section>             
+</div>-->
+<br><br>
+<footer id="myFooter">
+        <div class="container">
+        </div> 
+        <div class="social-networks">
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+			<a href="#" class="email"><i class="fa fa-envelope-o"></i></a>
+			
+        </div>
+
+        <div class="footer-copyright">
+            <p>© 2019 Copyright Voizfonica </p>
+        </div>
+ </footer>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

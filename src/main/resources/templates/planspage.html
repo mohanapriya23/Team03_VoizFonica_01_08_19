@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Plans Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/plans.css">
+    <link href='//fonts.googleapis.com/css?family=Lato:400,300,700,100' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-green static-top">
+    <div class="container">
+        <a class="navbar-brand" href="dashboard.html">VoizFonica</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto"style="color:white">
+                <li class="nav-item active"style="color:white" >
+                    <a class="nav-link" href="dashboard.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="paymentRecharge.html">Payment and Recharge</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="plans.html">Packs and Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="donglepurchase.html">Purchase</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="page-header">
+
+
+    <div class="row grid-divider">
+        <div class="col-sm-4">
+            <div class="col-padding">
+                <h3><b>Payment and Recharge</b></h3>
+                <!-- button type="button" class="btn btn-success btn-lg">Pay Bills</button>
+              <button type="button" class="btn btn-success btn-lg">Recharge</button> -->
+                <button type="button" id=prepaid class="btn btn-success btn-lg format2" th:href="plans"> PREPAID</button>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="col-padding">
+                <h3 align="center"><b>Pay bills</b></h3>
+                <button type="button" id=postpaid class="btn btn-success btn-lg format2" th:href="plans"> PREPAID</button>
+
+
+
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="col-padding">
+                <h3 align="center"><b>Prepaid Recharge</b></h3>
+                <button type="button" id="dongle" class="btn btn-success btn-lg format2" th:href="plans"> PREPAID</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+
+<!--<a th:href="plans">Prepaid Plans</a>
+<a th:href="plans">Postpaid Plans</a>
+<a th:href="plans">Dongle Plans</a>-->
+<br><br>
+<footer id="myFooter">
+    <div class="container">
+    </div>
+    <div class="social-networks">
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+        <a href="#" class="email"><i class="fa fa-envelope-o"></i></a>
+
+    </div>
+
+    <div class="footer-copyright">
+        <p>© 2019 Copyright Voizfonica </p>
+    </div>
+</footer>
+<script src="css/jquery-3.3.1.min.js"></script>
+<script src="css/bootstrap/js/bootstrap.min.js"></script>
+<script src="css/main.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Lato:400,300,700,100' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/plans.css">
+
+    <title>Title</title>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-green static-top">
+    <div class="container">
+        <a class="navbar-brand" href="dashboard.html">VoizFonica</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto"style="color:white">
+                <li class="nav-item active"style="color:white" >
+                    <a class="nav-link" href="dashboard.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="paymentRecharge.html">Payment and Recharge</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="plans.html">Packs and Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="donglepurchase.html">Purchase</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="row profile">
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+
+                <div class="profile-userpic">
+                    <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+                </div>
+
+                <div class="profile-usertitle">
+                    <img src="images/login.png" class="img-circle" width="100px">
+
+                    <div class="profile-usertitle-name">
+                        Hi, Customer
+                    </div>
+                    <div class="profile-usertitle-job">
+                        Account Overview
+                    </div>
+                    <button class="glyphicon glyphicon-trash"></button><br>Delete account
+                </div>
+
+                <div class="profile-usermenu">
+                    <ul class="nav">
+
+                        <li class="active">
+                            <a href="home.html">
+                                <i class="glyphicon glyphicon-home"></i>
+                                Home </a>
+                        </li>
+                        <li>
+                            <a th:href="edit">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                                Edit Profile</a>
+                        </li>
+
+                        <li>
+                            <a href="plans.html">
+                                <i class="glyphicon glyphicon-asterisk"></i>
+                                Offers </a>
+                        </li>
+
+                        <li>
+                            <a href="aboutus.html">
+                                <i class="glyphicon glyphicon-flag"></i>
+                                About us </a>
+                        </li>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="glyphicon glyphicon-log-out"></i>
+                                Log out </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END MENU -->
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="col-sm-4">
+                <div class="profile-content">
+
+
+                    <div class="row">
+                        <div class="progress blue">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+
+                            <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+
+                            <div class="progress-value">talktime</div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+
+                <div class="profile-content">
+
+                    <div class="row">
+                        <div class="progress yellow">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                            <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                            <div class="progress-value">Data</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="profile-content">
+                    <p style="color:green;">ACTIVE PLAN >>>>> Rs.499</p>
+                    <div class="profile-det">
+                        <img src="images/s.png" class="portrait" alt="my portrait">
+                        Validity:90 Days<br>
+                        Unlimited Calls<br>
+                        100SMS Free,
+                        1gb 4g data
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="profile-content">
+                    <p><center style="color:green;">VALUE ADDED SERVICES</center></p>
+                    <p><strong>-Call rate and SMS Packs<i class="glyphicon glyphicon-phone"></i></strong></p>
+                    <p>Call Local @40p and STD @50p per minute on any network in the country</p>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="profile-content">
+                    <div class="profile-rec">
+                        <img src="images/recharge.png" class="portrait" alt="my portrait">
+                    </div>
+                    <div><a href="PaymentRecharge.html"><center><button class="block">RECHARGE</button></center></a></div><br>
+
+
+                </div>
+            </div><div class="col-sm-4">
+            <div class="profile-content">
+
+                <div class="profile-pla">
+                    <img src="images/plans.png" class="portrait" alt="my portrait">
+                </div>
+                <div><a th:href="planspage"><center><button class="block">PLANS</button></center></a></div><br>
+
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+<div class="content">
+</div>
+<footer id="myFooter">
+    <div class="container-fluid">
+
+        <div class="social-networks">
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="email"><i class="fa fa-envelope-o"></i></a>
+
+        </div>
+
+        <div class="footer-copyright">
+            <p>© 2019 Copyright Voizfonica </p>
+        </div>
+    </div>
+
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+
+<!--<body>
+<a th:href="plans">Click here</a>
+</body>-->
+</html>
